@@ -1,3 +1,4 @@
+const tailwind = require("tailwindcss");
 /**
  * Configure your Gatsby site with this file.
  *
@@ -9,13 +10,51 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: "Camevents",
+    separator: "|",
+    baseTitle: "Camevents",
+    author: `@Camevents`,
+    lang: "en",
+    siteUrl: `https://Camevents.pl`,
+    themeColor: "#042428",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: [
+          tailwind,
+          require("./tailwind.config.js"), // Optional: Load custom Tailwind CSS configuration
+        ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100,
+        duration: 1000,
+      },
+    },
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-source-prismic`,
+      options: {
+        repositoryName: "Camevents",
+        accessToken: `${process.env.PRISMIC_ACCESS_TOKEN}`,
+        // linkResolver: ({ doc }) => {
+        //   if (doc.type === "page") {
+        //     return `/${doc.uid}`;
+        //   }
+
+        //   // Backup for all other types
+        //   return "/";
+        // },
+        schemas: {
+          page: require("./custom_types/page.json"),
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -40,4 +79,4 @@ module.exports = {
       },
     },
   ],
-}
+};
