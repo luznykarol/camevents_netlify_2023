@@ -2,11 +2,10 @@ import React from "react";
 import { graphql } from "gatsby";
 // import { withPrismicPreview } from "gatsby-plugin-prismic-previews";
 
-// import Seo from "@/components/seo";
+import Seo from "../components/seo";
 import Layout from "../components/layout";
 
 import SliceZone from "../components/SliceZone";
-// import { linkResolver } from "../utils/linkResolver";
 
 const IndexPage = ({ data }) => {
   console.log("data", data);
@@ -20,6 +19,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
+      <Seo data={seo} />
       <SliceZone data={document.body} />
     </Layout>
   );
