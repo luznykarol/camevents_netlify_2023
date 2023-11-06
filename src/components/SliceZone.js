@@ -1,21 +1,20 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Image from "../sections/Image";
-// import Faq from "@/sections/Faq";
-// import ContactForm from "@/sections/ContactForm";
-// import HalfSection from "@/sections/HalfSection";
-// import HowSection from "@/sections/HowSection";
-// import Map from "@/sections/Map";
+import Faq from "../sections/Faq";
+import ContactForm from "../sections/ContactForm";
+import HalfSection from "../sections/HalfSection";
+import HowSection from "../sections/HowSection";
+import Map from "../sections/Map";
 
 const SliceZone = ({ data }) => {
-  console.log("SLICEZONE", data);
   const sliceComponents = {
     image: Image,
-    // faq: Faq,
-    // contact_form: ContactForm,
-    // halfsection: HalfSection,
-    // howsection: HowSection,
-    // map: Map,
+    faq: Faq,
+    contact_form: ContactForm,
+    halfsection: HalfSection,
+    howsection: HowSection,
+    map: Map,
   };
 
   const sliceZoneContent = data.map((slice, index) => {
@@ -44,6 +43,11 @@ export const query = graphql`
       description
       body {
         ...Image
+        ...Faq
+        ...ContactForm
+        ...HalfSection
+        ...HowSection
+        ...Map
       }
     }
   }

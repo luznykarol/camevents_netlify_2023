@@ -2,7 +2,7 @@ import React from "react";
 import SlideToggle from "react-slide-toggle";
 import { RichText } from "prismic-reactjs";
 import htmlSerializer from "../utils/HtmlSerializer";
-import Icon from "@/components/Icon";
+import Icon from "./Icon";
 
 export default function Question({ item, active, toggleQuestion, id }) {
   const { question, answer, icon, position } = item;

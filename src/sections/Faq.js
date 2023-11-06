@@ -7,9 +7,7 @@ import htmlSerializer from "../utils/HtmlSerializer";
 export default function FAQ({ data }) {
   const { tag, content, title2 } = data.primary;
 
-  const renderTag = tag.text !== "" && (
-    <span className="tag tag--dark">{tag.text}</span>
-  );
+  const renderTag = tag.text !== "" && <span className="tag">{tag.text}</span>;
   const renderTitle = title2.text !== "" && (
     <h2 className="text-cam-white uppercase">{title2.text}</h2>
   );

@@ -65,6 +65,45 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: true,
+        develop: false, // Enable while using `gatsby develop`
+        tailwind: true, // Enable tailwindcss support
+        purgeCSSOptions: {
+          safelist: {
+            deep: [
+              /image-full$/,
+              /contentImage$/,
+              /gatsby-image-wrapper$/,
+              /ul$/,
+              /contact-slide-enter$/,
+              /contact-slide$/,
+              /contact-slide-enter-active$/,
+              /contact-slide-exit$/,
+              /contact-slide-exit-active$/,
+              /nav-slide$/,
+              /nav-slide-enter$/,
+              /nav-slide-enter-active$/,
+              /nav-slide-exit$/,
+              /nav-slide-exit-active$/,
+              /nav__menu$/,
+              /markdown-content$/,
+              /md-content$/,
+              /strong$/,
+              /em$/,
+              /h1$/,
+              /h2$/,
+              /h3$/,
+              /h4$/,
+              /h5$/,
+              /h6$/,
+            ],
+          },
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
