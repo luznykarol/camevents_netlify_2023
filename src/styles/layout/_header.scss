@@ -4,6 +4,9 @@
   position: relative;
 }
 
+.section {
+  @apply py-18;
+}
 .nav {
   &__menu {
     @apply flex flex-col p-24 absolute top-0 left-0 right-0 bottom-0 z-50 h-screen bg-gradient-button;
@@ -128,7 +131,6 @@
 
 .pill-image {
   @apply w-full mx-auto rounded-l;
-  max-width: 350px;
   z-index: 0;
   top: 30px;
 }

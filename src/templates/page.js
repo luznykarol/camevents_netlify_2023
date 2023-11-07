@@ -18,10 +18,12 @@ const Page = ({ data }) => {
   };
 
   return (
-    <Layout>
+    <>
       <Seo data={seo} />
-      <SliceZone data={document.body} />
-    </Layout>
+      <Layout>
+        <SliceZone data={document.body} />
+      </Layout>
+    </>
   );
 };
 

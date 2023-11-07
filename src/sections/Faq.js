@@ -21,7 +21,7 @@ export default function FAQ({ data }) {
   const items = data.items;
   const [currentActiveQuestion, setCurrentActiveQuestion] = useState(null);
   return (
-    <section className="faqSection py-18" id="faqSection">
+    <section className="faqSection section py-18" id="faqSection">
       <div className="container-sm">
         <div className=" mx-auto">
           <div className="mx-auto text-center mb-18 ">

@@ -9,7 +9,7 @@ const HalfSection = ({ data }) => {
   const image = getImage(image1);
 
   return (
-    <section className="halfSection py-18" id="halfSection">
+    <section className="halfSection section py-18" id="halfSection">
       <div className="container-sm">
         <div className="mx-auto text-center mb-18 ">
           <h2 className="uppercase text-cam-white text-center">

@@ -28,12 +28,12 @@ const HeaderNav = ({ data }) => {
               text={item.label}
             />
           ))}
-          {/* <Link
+          <Link
             onClick={() => setMenuOpen(false)}
             className="btn btn--small"
             to="/kontakt/">
             Dołącz
-          </Link> */}
+          </Link>
         </div>
       </div>
     </CSSTransition>

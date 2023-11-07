@@ -70,9 +70,9 @@ const Header = () => {
                   text={item.label}
                 />
               ))}
-              {/* <Link className="btn btn--small ml-6" to="/kontakt/">
+              <Link className="btn btn--small ml-6" to="/kontakt/">
                 Dołącz
-              </Link> */}
+              </Link>
             </div>
           </div>
           <button

@@ -5,18 +5,15 @@ import Layout from "../components/layout";
 
 import SliceZone from "../components/SliceZone";
 
-const IndexPage = ({ data }) => {
+const ContactPage = ({ data }) => {
   const document = data.prismicPage.data;
 
   return (
-    <>
-      <Layout>
-        <SliceZone data={document.body} />
-      </Layout>
-    </>
+    <Layout>
+      <SliceZone data={document.body} />
+    </Layout>
   );
 };
-
 export const Head = ({ data }) => {
   const document = data.prismicPage.data;
   const seo = {
@@ -29,11 +26,11 @@ export const Head = ({ data }) => {
 
 export const query = graphql`
   query HomePageQuery {
-    prismicPage(uid: { eq: "home" }) {
+    prismicPage(uid: { eq: "kontakt" }) {
       uid
       ...PrismicSlices
     }
   }
 `;
 
-export default IndexPage;
+export default ContactPage;

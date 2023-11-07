@@ -5,7 +5,7 @@ const Map = ({ data }) => {
   const { title2, content } = data.primary;
 
   return (
-    <section className="mapSection py-18" id="mapSection">
+    <section className="mapSection py-16" id="mapSection">
       <div className="container-xs">
         <h2 className="uppercase text-cam-white text-center">{title2.text}</h2>
 
